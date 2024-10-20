@@ -2,7 +2,7 @@ import "dotenv/config";
 import { createServer } from "node:http";
 import { argv } from "node:process";
 import { handlerGetRequests } from "./handlers/handlerGetRequests"
-// import { handlerPostRequests } from "./handlers/handlerPostRequests";
+import { handlerPostRequests } from "./handlers/handlerPostRequests";
 // import { handlerPutRequests } from "./handlers/handlerPutRequests";
 // import { handlerDeleteRequests } from "./handlers/handlerDeleteRequests";
 
@@ -23,7 +23,7 @@ if (!isMulti) {
             handlerGetRequests(request, response);
             break;
           case "POST":
-            //handlerPostRequests(request, response);
+            handlerPostRequests(request, response);
             break;
           case "PUT":
             //handlerPutRequests(request, response);

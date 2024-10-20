@@ -7,6 +7,12 @@ export type Handler = (
 
 type uuid = string;
 
+export type UserData = {
+  username: string;
+  age: number;
+  hobbies: string[];
+}
+
 export type User = {
   id: uuid;
   username: string;
