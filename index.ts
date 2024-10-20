@@ -2,9 +2,9 @@ import "dotenv/config";
 import { createServer } from "node:http";
 import { argv } from "node:process";
 import { handlerGetRequests } from "./handlers/handlerGetRequests"
-import { handlerPostRequests } from "./handlers/handlerPostRequests";
-import { handlerPutRequests } from "./handlers/handlerPutRequests";
-import { handlerDeleteRequests } from "./handlers/handlerDeleteRequests";
+// import { handlerPostRequests } from "./handlers/handlerPostRequests";
+// import { handlerPutRequests } from "./handlers/handlerPutRequests";
+// import { handlerDeleteRequests } from "./handlers/handlerDeleteRequests";
 
 const PORT = process.env.PORT || 3000;
 const args = argv.slice(2);
@@ -23,13 +23,13 @@ if (!isMulti) {
             handlerGetRequests(request, response);
             break;
           case "POST":
-            handlerPostRequests(request, response);
+            //handlerPostRequests(request, response);
             break;
           case "PUT":
-            handlerPutRequests(request, response);
+            //handlerPutRequests(request, response);
             break;
           case "DELETE":
-            handlerDeleteRequests(request, response);
+            //handlerDeleteRequests(request, response);
             break;
           default:
             response.writeHead(405, "Invalid Request");
