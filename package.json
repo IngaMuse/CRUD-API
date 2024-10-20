@@ -2,10 +2,11 @@
   "name": "crud-api",
   "version": "1.0.0",
   "description": "Task is to implement simple CRUD API using in-memory database underneath.",
-  "main": "index.ts",
+  "main": "dist/index.ts",
   "scripts": {
     "tsc": "tsc -p tsconfig.json",
     "start:dev": "nodemon index.ts",
+    "start:prod": "nodemon dist/index.ts",
     "start:multi": "nodemon index.ts --multi",
     "test": "npm test"
   },
