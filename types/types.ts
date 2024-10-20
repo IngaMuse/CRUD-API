@@ -5,9 +5,10 @@ export type Handler = (
   response: ServerResponse<IncomingMessage>
 ) => void;
 
+type uuid = string;
 
 export type User = {
-  id: string;
+  id: uuid;
   username: string;
   age: number;
   hobbies: string[];
