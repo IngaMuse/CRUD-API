@@ -20,7 +20,7 @@ const server = createServer((request, response) => {
 
     if (!url?.startsWith("/api/users")) {
       response.writeHead(404, "Not Found");
-      response.end(JSON.stringify({ message: "Invalid API Endpoint Route" }));
+      response.end( "Invalid API Endpoint Route" );
     } else {
       switch (method) {
         case "GET":

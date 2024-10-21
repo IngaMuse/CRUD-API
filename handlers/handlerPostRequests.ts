@@ -42,5 +42,4 @@ export const handlerPostRequests: Handler = (request, response): void => {
   } else {
     setBadRequestAnswer(response, 400, 'Invalid API Endpoint URL');
   }
-
 }

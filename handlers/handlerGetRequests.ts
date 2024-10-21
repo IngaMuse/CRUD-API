@@ -7,6 +7,7 @@ export const handlerGetRequests: Handler = (request, response): void => {
   if (request.url?.match(/^\/api\/users$/)) {
     response.writeHead(200, { "Content-Type": "application/json" });
     response.end(JSON.stringify(users));
+    return;
   }
   if (request.url?.match(/^\/api\/users\/([abcdef\-0-9]+)$/)) {
     const userId = request.url.split("/")[3];
@@ -22,6 +23,7 @@ export const handlerGetRequests: Handler = (request, response): void => {
       }
     } else
       setBadRequestAnswer(response, 404, "User With Provided Id Not Found");
+    return;
   }
   setBadRequestAnswer(
     response,
