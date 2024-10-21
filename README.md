@@ -11,7 +11,9 @@ run npm install  inside application folder
 ```
 npm run start:dev - to run in single-thread developing mode
 npm run start:multi - to run in multi-thread mode
-npm run start:prod - to run bundler and run the bundle in single-thread mode
+npm run start:prod - to run bundler and run the bundle in single-thread 
+```
+
 
 ## How to interact with the API
 
@@ -73,17 +75,6 @@ type: JSON
 method: DELETE
 url: http://localhost:3000/api/users/${userID}
 ```
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Assignment: CRUD API
