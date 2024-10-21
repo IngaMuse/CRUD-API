@@ -1,3 +1,91 @@
+Application CRUD API on node.js
+
+#### Install all needed dependencies
+
+```
+run npm install  inside application folder
+```
+
+#### Run several commands
+
+```
+npm run start:dev - to run in single-thread developing mode
+npm run start:multi - to run in multi-thread mode
+npm run start:prod - to run bundler and run the bundle in single-thread mode
+
+## How to interact with the API
+
+Body should contain necessary fields:
+```
+{
+  id: string;
+  username: string;
+  age: number;
+  hobbies: string[];  // Array of strings or empty array
+}
+```
+
+#### Get all users
+
+Note: If you wouldn't update .env file. Server will running on 3000 port
+
+```
+method: GET
+url: http://localhost:3000/api/users
+```
+
+#### Get user
+
+```
+method: GET
+url: http://localhost:3000/api/users/${userID}
+```
+
+#### Add user
+
+```
+method: POST
+url: http://localhost:3000/api/users
+body: {
+    "username": "Your user name",
+    "age": 30,
+    "hobbies": ["dancing"]
+}
+type: JSON
+```
+
+#### Update user
+
+```
+method: PUT
+url: http://localhost:3000/api/users/${userID}
+body: {
+    "username": "New name",
+    "age": 40,
+    "hobbies": ["sleep"]
+}
+type: JSON
+```
+
+#### Delete user
+
+```
+method: DELETE
+url: http://localhost:3000/api/users/${userID}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Assignment: CRUD API
 
 ## Description
