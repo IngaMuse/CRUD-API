@@ -6,7 +6,7 @@
   "scripts": {
     "tsc": "tsc -p tsconfig.json",
     "start:dev": "nodemon index.ts",
-    "start:prod": "nodemon dist/index.ts",
+    "start:prod": "tsc -p tsconfig.json && node ./dist/index.js",
     "start:multi": "nodemon index.ts --multi",
     "test": "npm test"
   },

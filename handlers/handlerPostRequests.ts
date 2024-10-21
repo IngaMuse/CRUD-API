@@ -5,7 +5,7 @@ import { setBadRequestAnswer } from "../utils/setBadRequest";
 import { users } from "../db/userdb";
 
 export const handlerPostRequests: Handler = (request, response): void => {
-  if (request.url=== '/api/users') {
+  if (request.url?.match(/^\/api\/users$/)) {
     let body = "";
 
     request.on("data", (chunk) => (body += chunk.toString()));
@@ -30,17 +30,17 @@ export const handlerPostRequests: Handler = (request, response): void => {
           users.push(userToSave);
           return userToSave;
         })
-        .then((user) => {
+        .then((userToSave) => {
           response.writeHead(201, { "Content-Type": "application/json" });
-          response.write(JSON.stringify(user));
+          response.write(JSON.stringify(userToSave));
           response.end();
         })
         .catch(() => {
-          setBadRequestAnswer(response, 400, "Body Doesn't Contain Required Fields")
+          setBadRequestAnswer(response, 400, "Body Doesn't Contain Required Fields");
         });
     });
   } else {
-    setBadRequestAnswer(response, 400, 'Invalid API Endpoint URL')
+    setBadRequestAnswer(response, 400, 'Invalid API Endpoint URL');
   }
 
 }

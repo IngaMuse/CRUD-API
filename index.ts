@@ -3,7 +3,7 @@ import { createServer } from "node:http";
 import { argv } from "node:process";
 import { handlerGetRequests } from "./handlers/handlerGetRequests"
 import { handlerPostRequests } from "./handlers/handlerPostRequests";
-// import { handlerPutRequests } from "./handlers/handlerPutRequests";
+import { handlerPutRequests } from "./handlers/handlerPutRequests";
 // import { handlerDeleteRequests } from "./handlers/handlerDeleteRequests";
 
 const PORT = process.env.PORT || 3000;
@@ -26,7 +26,7 @@ if (!isMulti) {
             handlerPostRequests(request, response);
             break;
           case "PUT":
-            //handlerPutRequests(request, response);
+            handlerPutRequests(request, response);
             break;
           case "DELETE":
             //handlerDeleteRequests(request, response);
