@@ -46,11 +46,11 @@ export const handlerPutRequests: Handler = (request, response): void => {
             });
         });
       } else {
-        setBadRequestAnswer(response, 404, "User With Provided Id Not Found")
+        setBadRequestAnswer(response, 404, "User With Provided Id Not Found");
       }
     }
   } else {
-    setBadRequestAnswer(response, 400, "Invalid User Id or User Id Was Not Provided")
+    setBadRequestAnswer(response, 400, "Invalid User Id or User Id Was Not Provided");
   }
 
 }
